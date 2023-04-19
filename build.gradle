@@ -6,6 +6,10 @@ repositories {
     mavenCentral()
 }
 
+compileTestJava{
+       options.encoding = 'UTF-8'
+}
+
 
 dependencies {
     testImplementation (
@@ -16,5 +20,6 @@ dependencies {
 }
 
 test {
+    systemProperty "chromeoptions.prefs", "intl.accept_languages=pt"
     useJUnitPlatform()
 }

@@ -14,7 +14,6 @@ public class SelenideRepositorySearch {
     @BeforeAll
     static void beforeAll() {
         Configuration.browserSize = "1920x1080";
-        // Configuration.baseUrl = "https://demoqa.com";
         System.setProperty("chromeoptions.args", "--remote-allow-origins=*");
     }
 
@@ -27,6 +26,7 @@ void shouldFindSelenideRepositoryAtTheTop(){
 
     //Ввести в поиск selenide и нажать Enter
 $("[placeholder ='Search GitHub']").setValue("selenide").pressEnter();
+$$("ul.repo-list li").first().$("a").click();
 
 sleep(5000);
 

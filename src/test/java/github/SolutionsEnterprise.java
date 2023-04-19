@@ -21,7 +21,7 @@ public class SolutionsEnterprise {
    void sollutionsEnterprise(){
 
         open("https://github.com/");
-        $(".HeaderMenu-item:nth-child(2) > .HeaderMenu-link").hover();
+        $("div.header-menu-wrapper").$(byText("Solutions")).hover();
         $(byText("Enterprise")).click();
         $(byText("Build like the best")).shouldBe(text("Build like the best"));
     }
